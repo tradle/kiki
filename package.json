@@ -4,8 +4,13 @@
   "description": "Wrappers for DSA, EC, Bitcoin and other keys to provide a common API for signing/verifying/importing/exporting",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "style": "standard $(git ls-files '**.js')"
   },
+  "pre-commit": [
+    "style",
+    "standard"
+  ],
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +20,9 @@
     "safecb": "0.0.1",
     "tradle-utils": "^0.1.3",
     "typeforce": "^1.1.4"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.0.10",
+    "standard": "^4.5.4"
   }
 }
