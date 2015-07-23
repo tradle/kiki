@@ -9,7 +9,7 @@
   },
   "pre-commit": [
     "style",
-    "standard"
+    "test"
   ],
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
   "license": "MIT",

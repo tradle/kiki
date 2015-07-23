@@ -23,9 +23,9 @@ function testKey (type) {
 
   test('export', function (t) {
     // pub JSON is priv JSON minus 'priv' property
-    var pub = key.toJSON()
+    var pub = key.exportPublic()
     t.notOk('priv' in pub)
-    var priv = key.toJSON(true)
+    var priv = key.exportPrivate()
     t.deepEqual(priv, json)
     pub.priv = priv.priv
     t.deepEqual(priv, json)

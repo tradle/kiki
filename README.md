@@ -83,6 +83,28 @@ var priv = ecKey.exportPrivate()
 var ecKey = kiki.toKey(pub || priv) 
 ```
 
+## Key API
+
+### (static) gen(options)
+
+Generate a new key. Different keys may have different required properties (this asymmetry can't be avoided.)
+
+### hasDeterministicSig()
+
+Some keys have deterministic signatures - same outputs for the same inputs. Some don't.
+
+### parsePub(pubKeyString)
+
+### parsePriv(privKeyString)
+
+### fingerprint()
+
+### pubKeyString()
+
+### exportPublic()
+
+### exportPrivate()
+
 ## mock "secure element" API
 
 Simple mock for a "secure element" type API, where you don't have access to the private keys. Give it a public key, an operation and data, and it will perform signing, decrypting, etc.
