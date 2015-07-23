@@ -44,7 +44,6 @@ function testKey (type) {
   })
 
   test('sign/verify', function (t) {
-    debugger
     var sig = key.signSync(MSG)
     t.ok(key.verifySync(MSG, sig))
     if (key.hasDeterministicSig()) {
@@ -60,7 +59,7 @@ function testKey (type) {
 
       key.verify(MSG, sig, function (err, verified) {
         if (err) throw err
-        
+
         t.equal(verified, true)
         if (key.hasDeterministicSig()) {
           t.equal(sig, fixtures[type])
