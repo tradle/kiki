@@ -51,7 +51,7 @@ var pub = ecKey.exportPublic()
 var priv = ecKey.exportPrivate()
 ```
 
-#### pub
+### pub
 
 ```json
 {
@@ -63,7 +63,7 @@ var priv = ecKey.exportPrivate()
 }
 ```
 
-#### priv
+### priv
 
 ```json
 {
@@ -81,4 +81,15 @@ var priv = ecKey.exportPrivate()
 ```js
 // recover to typed instance (ECKey/DSAKey/etc.)
 var ecKey = kiki.toKey(pub || priv) 
+```
+
+## mock "secure element" API
+
+Simple mock for a "secure element" type API, where you don't have access to the private keys. Give it a public key, an operation and data, and it will perform signing, decrypting, etc.
+
+```js
+var kiki = require('kiki').kiki
+var secureEl = kiki(privKeys) // setup the mock secure element
+secureEl.sign(pubKey, msg, callback)
+secureEl.ecdh(ecPubKey1, ecPubKey2, callback)
 ```
