@@ -12,7 +12,7 @@
     "standard"
   ],
   "author": "Mark Vayngrib <mark.vayngrib@lablz.com> (http://github.com/mvayngrib)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bitcoinjs-lib": "^1.4.1",
     "elliptic": "^5.1.0",
