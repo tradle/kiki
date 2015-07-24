@@ -1,5 +1,6 @@
 var test = require('tape')
 var toKey = require('../lib/toKey')
+var Keys = require('../lib/Keys')
 var fixtures = require('./fixtures/sigs')
 var MSG = fixtures.msg
 
@@ -65,6 +66,35 @@ function testKey (type) {
           t.equal(sig, fixtures[type])
         }
         t.end()
+      })
+    })
+  })
+
+  test('revocation', function (t) {
+    t.plan(3)
+
+    var key = Keys.Bitcoin.gen()
+    key.generateRevocation(Keys.Base.REVOCATION_REASONS.keyCompromise, function (err, cert) {
+      if (err) throw err
+
+      key.validateRevocation(cert, function (err, valid) {
+        if (err) throw err
+
+        t.equal(valid.result, true)
+      })
+    })
+
+    t.throws(function () {
+      key.generateRevocation(11, function () {})
+    }, /Invalid revocation reason/)
+
+    key.addRevocation(1, function (err) {
+      if (err) throw err
+
+      key.addRevocation(2, function (err) {
+        if (err) throw err
+
+        t.equal(key.exportPublic().revocations.length, 2)
       })
     })
   })
