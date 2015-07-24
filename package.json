@@ -18,8 +18,7 @@
     "elliptic": "^5.1.0",
     "otr": "git://github.com/mvayngrib/otr#master",
     "safecb": "0.0.1",
-    "tradle-utils": "^0.1.3",
-    "typeforce": "^1.1.4"
+    "tradle-utils": "^0.1.3"
   },
   "devDependencies": {
     "pre-commit": "^1.0.10",
