@@ -15,7 +15,7 @@
   "license": "MIT",
   "peerDependencies": {
     "bitcoinjs-lib": "^1.4.1",
-    "elliptic": "^5.1.0"
+    "elliptic": "^3.0.3"
   },
   "dependencies": {
     "otr": "git://github.com/mvayngrib/otr#master",
