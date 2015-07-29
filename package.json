@@ -18,6 +18,7 @@
     "elliptic": "^3.0.3"
   },
   "dependencies": {
+    "array-find": "^1.0.0",
     "otr": "git://github.com/mvayngrib/otr#master",
     "safecb": "0.0.1",
     "tradle-utils": "^0.1.3"
