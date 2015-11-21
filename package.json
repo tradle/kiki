@@ -1,5 +1,5 @@
 {
-  "name": "kiki",
+  "name": "@tradle/kiki",
   "version": "1.1.7",
   "description": "Wrappers for DSA, EC, Bitcoin and other keys to provide a common API for signing/verifying/importing/exporting",
   "main": "index.js",
@@ -15,14 +15,13 @@
   "license": "MIT",
   "dependencies": {
     "@tradle/bitcoinjs-lib": "^1.5.7",
+    "@tradle/utils": "^0.2.2",
     "array-find": "^1.0.0",
-    "bitcoinjs-lib": "mvayngrib/bitcoinjs-lib#lazy1.5.7",
     "debug": "^2.2.0",
     "elliptic": "^3.0.3",
     "extend": "^3.0.0",
     "otr": "git://github.com/mvayngrib/otr#master",
-    "safecb": "0.0.1",
-    "tradle-utils": "^0.2.2"
+    "safecb": "0.0.1"
   },
   "devDependencies": {
     "pre-commit": "^1.0.10",
