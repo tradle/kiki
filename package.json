@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@tradle/bitcoinjs-lib": "^1.5.7",
+    "@tradle/otr": "^0.2.15",
     "@tradle/utils": "^0.2.2",
     "array-find": "^1.0.0",
     "debug": "^2.2.0",
