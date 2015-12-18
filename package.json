@@ -16,7 +16,7 @@
   "dependencies": {
     "@tradle/bitcoinjs-lib": "^1.5.7",
     "@tradle/otr": "^0.2.15",
-    "@tradle/utils": "^0.2.2",
+    "@tradle/utils": "^1.0.0",
     "array-find": "^1.0.0",
     "debug": "^2.2.0",
     "elliptic": "^3.0.3",
