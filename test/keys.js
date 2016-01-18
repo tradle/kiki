@@ -44,9 +44,9 @@ function testKey (type) {
     t.end()
   })
 
-  test('sign/verify', function (t) {
-    var sig = key.signSync(MSG)
-    t.ok(key.verifySync(MSG, sig))
+  test('sign/verify (sync)', function (t) {
+    var sig = key.sign(MSG)
+    t.ok(key.verify(MSG, sig))
     if (key.hasDeterministicSig()) {
       t.equal(sig, fixtures[type])
     }
