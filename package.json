@@ -1,6 +1,6 @@
 {
   "name": "@tradle/kiki",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "description": "Wrappers for DSA, EC, Bitcoin and other keys to provide a common API for signing/verifying/importing/exporting",
   "main": "index.js",
   "scripts": {
